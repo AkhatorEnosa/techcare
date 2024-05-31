@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/output.css">
+    <title>Patient Dashboard</title>
+</head>
+<body>
+    <div class="flex flex-col p-10 bg-[#F6F7F8] text-[14px]">
+      <!-- header -->
+       <header class="grid grid-cols-5 w-full mb-10 gap-8 bg-white p-6 rounded-full">
+        <div>
+          <img src="assets/TestLogo.svg" alt="LOGO" srcset="assets/TestLogo.svg" class="h-[48px]">
+        </div>
+        <div class="col-span-3">
+          <ul class="w-full h-full flex gap-12 place-content-center place-items-center">
+            <li class="flex gap-2 hover:gap-[9px] items-center hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/home_FILL0_wght300_GRAD0_opsz24.svg" alt="home" class="w-[15px] h-[15px]"> Overview</li>
+            <li class="flex gap-[9px] hover:gap-[9px] items-center bg-[#01F0D0] hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/group_FILL0_wght300_GRAD0_opsz24.svg" alt="group" class="w-[15px] h-[15px]"> Patient</li>
+            <li class="flex gap-2 hover:gap-[9px] items-center hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/calendar_today_FILL0_wght300_GRAD0_opsz24.svg" alt="calender" class="w-[15px] h-[15px]"> Schedule</li>
+            <li class="flex gap-2 hover:gap-[9px] items-center hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg" alt="chat" class="w-[15px] h-[15px]"> Message</li>
+            <li class="flex gap-2 hover:gap-[9px] items-center hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/credit_card_FILL0_wght300_GRAD0_opsz24.svg" alt="credit-card" class="w-[15px] h-[15px]"> Transaction</li>
+          </ul>
+        </div>
+        <div>
+          <div class="flex justify-between">
+            <div class="flex">
+              <img src="assets/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="profil_pic" srcset="" class="w-[44px] h-[44px] mr-2">
+              <div>
+                <p class="font-bold">Dr. Jose Simmons</p>
+                <p>General Practitioner</p>
+              </div>
+            </div>
+
+            <div class="flex gap-2 justify-between items-center"> 
+              <img src="assets/settings_FILL0_wght300_GRAD0_opsz24.svg" alt="settings" srcset="" class="w-[18.94px] h-[24px]">
+              <img src="assets/more_vert_FILL0_wght300_GRAD0_opsz24.svg" alt="more" srcset=""lass="w-[3.71px] h-[18px]">
+            </div>
+          </div>
+        </div>
+       </header>
+       <!-- End of HEader -->
+
+       <main class="grid grid-cols-4 row-span-5 gap-4 w-full overflow-scroll">
+        <section class="flex flex-col gap-10 bg-white py-5 shadow-sm overflow-scroll rounded-2xl h-[1033px]">
+          <div class="flex justify-between align-middle items-center px-5">
+            <h2 class="font-extrabold text-2xl leading-[33px]">Patients</h2>
+            <img src="assets/search_FILL0_wght300_GRAD0_opsz24.svg" alt="search" srcset="assets/search_FILL0_wght300_GRAD0_opsz24.svg" class="w-[18px] h-[18px]">
+          </div>
+
+          <div class="patients-div flex flex-col" >
+          </div>
+
+        </section>
+
+        <section class="flex flex-col col-span-2 gap-8">
+          <div class="flex flex-col bg-white p-5 rounded-2xl shadow-sm h-[673px]">
+            <h2 class="font-extrabold text-2xl mb-10">Diagnosis History</h2>
+            <div class="grid grid-cols-3 gap-4 bg-[#F4F0FE] p-4 mb-5">
+              <div class="chart col-span-2">
+                <div class="flex justify-between items-center mb-7">
+                  <h2 class="text-lg font-bold">Blood Pressure</h2>
+                  <p class="flex gap-4 items-center m-0 mr-8">Last 6 months <img src="assets/expand_more_FILL0_wght300_GRAD0_opsz24.svg" alt="expand" class="w-[10.65px] h-[6px]"></p>
+                </div>
+                <canvas id="myChart" class="h-[298px]"></canvas>
+              </div>
+
+              <div class="details flex flex-col gap-4">
+                
+              </div>
+            </div>
+
+            <div class="diagnosis-top-bottom grid grid-cols-3 gap-5 ">
+            </div>
+          </div>
+          <div class="bg-white shadow-sm rounded-2xl p-5">
+            <h2 class="text-2xl font-extrabold">Diagnosis List</h2>
+            <div class="table-container mt-10 mb-0">
+              <table class="diagnosis-list">
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- profile -->
+        <section class="flex flex-col gap-8 h-[740px]">
+          <div class="profile bg-white py-8 px-5 shadow-sm rounded-2xl">
+          </div>
+
+          <div class="flex flex-col p-5 gap-4 bg-white rounded-2xl">
+            <h2 class="text-2xl font-extrabold">Lab Results</h2>
+            <ul class="lab-results flex flex-col overflow-hidden p-0">
+            </ul>
+          </div>
+        </section>
+       </main>
+    </div>
+    <script src="js/api.js" type="module"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
