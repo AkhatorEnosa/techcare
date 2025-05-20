@@ -8,13 +8,14 @@ import { getProfile } from "./profile.js";
 let username = 'coalition';
 let password = 'skills-test';
 let auth = btoa(`${username}:${password}`);
+const controller = new AbortController();
+const signal = controller.signal;
 
 let data;
-
-const controller = new AbortController();
 // Authenticate (dummy API)
 const apiCall = async () => {
 	await fetch('https://fedskillstest.coalitiontechnologies.workers.dev/', {
+		signal,
 		headers: {
 			'Authorization': `Basic ${auth}`
 		}
@@ -30,11 +31,10 @@ const apiCall = async () => {
 		getLabResults(data);
 		getProfile(data);
 		getList(data);
+		controller.abort();
 	}).catch(function (error) {
 		console.warn(error);
 	});
 }
-
-controller.abort();
 
 apiCall();

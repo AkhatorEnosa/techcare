@@ -23,14 +23,14 @@ export function patientData(data) {
 		itemDiv2.append(itemP);
 		
 		if(items.name ===  "Jessica Taylor") {
-			divWrapper.className = "flex justify-between items-center w-full px-5 py-4 bg-[#D8FCF7]"
+			divWrapper.className = "flex justify-between items-center w-full px-5 py-2 lg:py-4 bg-[#D8FCF7]"
 		} else {
-			divWrapper.className = "flex justify-between items-center w-full px-5 py-4 hover:bg-[#D8FCF7]"
+			divWrapper.className = "flex justify-between items-center w-full px-5 py-2 lg:py-4 hover:bg-[#D8FCF7]"
 		}
 		itemDiv.className = "flex gap-3 justify-center items-center"
-		itemDiv2.className = "flex flex-col gap-2"
+		itemDiv2.className = "flex flex-col lg:gap-2"
 		itemHeading.className = "text-[14px] font-bold"
-		itemImage2.className = "w-[48px] h-[48px]";
+		itemImage2.className = "size-[30px] lg:size-[48px]";
 
 		itemImage1.src = "assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
 		itemImage2.src = items.profile_picture;

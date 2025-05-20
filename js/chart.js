@@ -16,10 +16,10 @@ export function populateChart(data) {
     
     filteredData[0].diagnosis_history.map(e => {
         date.push(`${(e.month).substring(0, 3)}, ${e.year}`);
-        // console.log(date.splice(6).sort())
         shuffledDate = date.slice(0,6).reverse();
         return shuffledDate;
     });
+    console.log(date.sort((a, b) => a.localeCompare(b)))
 
     filteredData[0].diagnosis_history.map(e => {
         diastolicValue.push(e.blood_pressure.diastolic.value);
