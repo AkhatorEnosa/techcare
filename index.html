@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="src/output.css">
     <title>Patient Dashboard</title>
 </head>
-<body class="max-w-[1440px] w-screen">
-    <div class=" flex flex-col p-5 lg:p-10 bg-[#F6F7F8] text-[14px]">
+<body class="w-screen mx-auto">
+    <div class="max-w-[1440px] flex flex-col p-5 lg:p-10 bg-[#F6F7F8] text-[14px]">
       <!-- header -->
        <header class="flex justify-between items-center lg:grid lg:grid-cols-5 w-full mb-10 gap-8 bg-white p-6 rounded-full">
           <div>
-            <img src="assets/TestLogo.svg" alt="LOGO" srcset="assets/TestLogo.svg" class="w-[100px] lg:h-[48px]">
+            <img src="assets/TestLogo.svg" alt="LOGO" srcset="assets/TestLogo.svg" class="w-[100px] lg:w-auto lg:h-[48px]">
           </div>
           <div class="hidden lg:flex lg:col-span-3">
-            <ul class="w-full h-full flex gap-12 place-content-center place-items-center">
+            <ul class="flex gap-6 ">
               <li class="flex gap-2 hover:gap-[9px] items-center hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/home_FILL0_wght300_GRAD0_opsz24.svg" alt="home" class="w-[15px] h-[15px]"> Overview</li>
               <li class="flex gap-[9px] hover:gap-[9px] items-center bg-[#01F0D0] hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/group_FILL0_wght300_GRAD0_opsz24.svg" alt="group" class="w-[15px] h-[15px]"> Patient</li>
               <li class="flex gap-2 hover:gap-[9px] items-center hover:bg-[#01F0D0] py-[11px] px-4 rounded-full durartion-500 cursor-pointer"><img src="assets/calendar_today_FILL0_wght300_GRAD0_opsz24.svg" alt="calender" class="w-[15px] h-[15px]"> Schedule</li>
@@ -32,9 +32,9 @@
             <div class="flex justify-between">
               <div class="flex">
                 <img src="assets/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="profil_pic" srcset="" class="size-[30px] lg:size-[44px] mr-2">
-                <div class="hidden lg:inline-block">
+                <div class="hidden lg:flex lg:flex-col">
                   <p class="font-bold">Dr. Jose Simmons</p>
-                  <p>General Practitioner</p>
+                  <p class="line-clamp-1">General Practitioner</p>
                 </div>
               </div>
 
